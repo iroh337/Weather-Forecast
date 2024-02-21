@@ -13,10 +13,12 @@ input.addEventListener('keypress', function(event){
 function showInDisplay(data){
     
     if(data.cod === 200){
+        const img = document.querySelector('.img').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+
         const txtcity = document.querySelector('.city').innerHTML = `Weather in ${data.name} (${data.sys.country})`
         const txttemp = document.querySelector('.temp').innerHTML = `${Math.floor(data.main.temp)} ºC`
         
-        const img = document.querySelector('.img').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+        
         const info = document.querySelector('.info').innerHTML = `${data.weather[0].main}`
         const humid = document.querySelector('.humidity').innerHTML = `${data.main.humidity}% Humidity`
     }else{
@@ -26,6 +28,10 @@ function showInDisplay(data){
         const img = document.querySelector('.img').style.visibility = 'hidden'
         const info = document.querySelector('.info').innerHTML = ``
         const humid = document.querySelector('.humidity').innerHTML = ``
+
+        setTimeout(function(){
+            location.reload()
+        },3000)
     }
     
     

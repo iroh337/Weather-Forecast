@@ -16,6 +16,8 @@ body {
     background-image: url("https://source.unsplash.com/1920x1080/?landscape");    
 }
 
+
+
 .container{
     color: #ffffff;
     max-height: 60%;
@@ -97,6 +99,7 @@ font-size: larger;
 }
 .city{
     white-space: nowrap;
+    text-align: center;
 }
 
 @media (max-width:400px){
