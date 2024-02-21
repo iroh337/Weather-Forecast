@@ -2,12 +2,18 @@ var api_key = '427a22132c36c4ff825bc68401e52bcd'
 
 var button = document.querySelector('.search')
 
+var input = document.querySelector('.input-city')
 
+input.addEventListener('keypress', function(event){
+    if(event.key === 'Enter'){
+        handClick()
+    }
+})
 
 function showInDisplay(data){
     
     if(data.cod === 200){
-        const txtcity = document.querySelector('.city').innerHTML = `Weather ${data.name} (${data.sys.country})`
+        const txtcity = document.querySelector('.city').innerHTML = `Weather in ${data.name} (${data.sys.country})`
         const txttemp = document.querySelector('.temp').innerHTML = `${Math.floor(data.main.temp)} ºC`
         
         const img = document.querySelector('.img').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
@@ -35,14 +41,13 @@ async function seacrhCity(city){
 
 
 
-button.addEventListener('click', () =>{
+button.addEventListener('click', handClick)
+
+
+function handClick(){
+
     var city = document.querySelector('.input-city').value
 
     
     seacrhCity(city)
-
-    
-
-})
-
-
+}

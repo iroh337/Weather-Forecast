@@ -22,6 +22,7 @@ body {
     justify-content: space-between;
     width: 450px;
     height:fit-content;
+    min-width: fit-content;
     max-width: 50%;
     align-items: center;
     background-color: dodgerblue;
@@ -40,10 +41,17 @@ font-size: larger;
     display: flex;
     align-items: center;
     padding-bottom: 10%;
+    justify-content: center;
+}
+
+.humidity{
+    text-align: center;
+    font-size: 20px;
 }
 
 .small-container img{
     width: 60px;
+    
 }
 
 .input-city{
@@ -76,4 +84,35 @@ font-size: larger;
 
 .medium-container h4{
     margin-top: 30px;
+}
+
+.temp{
+    color: rgb(35, 35, 35);
+    width: 120px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #e0e0e0;
+    border-radius: 100px;
+    margin: auto;    
+}
+.city{
+    white-space: nowrap;
+}
+
+@media (max-width:400px){
+    .container{
+        min-width: 300px;
+        width: 200px;
+    }
+
+    .city{
+        font-size: large;
+    }
+    .small-container{
+        justify-content: center;
+    }
+
+    .humidity{
+        text-align: center;
+    }
 }
