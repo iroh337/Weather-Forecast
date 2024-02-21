@@ -18,10 +18,11 @@ body {
 
 .container{
     color: #ffffff;
-    min-height: 40%;
+    max-height: 60%;
     justify-content: space-between;
-    width: 90%;
-    max-width: 450px;
+    width: fit-content;
+    height:fit-content;
+    max-width: 50%;
     align-items: center;
     background-color: dodgerblue;
     padding: 20px;
@@ -55,11 +56,21 @@ font-size: larger;
     margin-bottom: 10px;
 }
 .search{
-    padding: 4%;
+    position: relative;
+    top:5px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    align-items: center;
+    justify-content: center;
     outline: none;
     border: 0;
     cursor: pointer;
+}
+.search img{
+    
+    justify-content: center;
+    align-items: center;
 }
 
 
