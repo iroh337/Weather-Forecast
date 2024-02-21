@@ -13,8 +13,7 @@ body {
     height: 100vh;
     align-items: center;
     justify-content: center;
-    /* background-image: linear-gradient(#dedede, #18181B) ; */
-    background-image: url("https://source.unsplash.com/1600x900/?landscape");    
+    background-image: url("https://source.unsplash.com/1920x1080/?landscape");    
 }
 
 .container{
